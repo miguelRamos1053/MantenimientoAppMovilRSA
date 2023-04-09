@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Estampados App Demo Inicio'),
+      home: const MyHomePage(title: 'VIVIANA'),
     );
   }
 }
