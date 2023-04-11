@@ -28,7 +28,7 @@ class _CartScreenState extends State<CartScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('My Shopping Cart'),
+        title: const Text('Carrito de Compra'),
         actions: [
           badges.Badge(
             badgeContent: Consumer<CartProvider>(
@@ -40,7 +40,7 @@ class _CartScreenState extends State<CartScreen> {
                 );
               },
             ),
-            position: badges.BadgePosition.topEnd(top: -10, end: -12),
+            position: badges.BadgePosition.topEnd(top: -3, end: -12),
             child: IconButton(
               onPressed: () {},
               icon: const Icon(Icons.shopping_cart),
@@ -59,7 +59,7 @@ class _CartScreenState extends State<CartScreen> {
                 if (provider.cart.isEmpty) {
                   return const Center(
                       child: Text(
-                    'Your Cart is Empty',
+                    'El carrito de compras esta vácio',
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
                   ));
@@ -96,7 +96,7 @@ class _CartScreenState extends State<CartScreen> {
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 1,
                                         text: TextSpan(
-                                            text: 'Name: ',
+                                            // text: 'Name: ',
                                             style: TextStyle(
                                                 color: Colors.blueGrey.shade700,
                                                 fontSize: 16.0),
@@ -109,26 +109,27 @@ class _CartScreenState extends State<CartScreen> {
                                                           FontWeight.bold)),
                                             ]),
                                       ),
+                                      // RichText(
+                                      //   maxLines: 1,
+                                      //   text: TextSpan(
+                                      //       // text: 'Unit: ',
+                                      //       style: TextStyle(
+                                      //           color: Colors.blueGrey.shade800,
+                                      //           fontSize: 16.0),
+                                      //       children: [
+                                      //         TextSpan(
+                                      //             text:
+                                      //                 '${provider.cart[index].unitTag!}\n',
+                                      //             style: const TextStyle(
+                                      //                 fontWeight:
+                                      //                     FontWeight.bold)),
+                                      //       ]),
+                                      // ),
                                       RichText(
                                         maxLines: 1,
                                         text: TextSpan(
-                                            text: 'Unit: ',
-                                            style: TextStyle(
-                                                color: Colors.blueGrey.shade800,
-                                                fontSize: 16.0),
-                                            children: [
-                                              TextSpan(
-                                                  text:
-                                                      '${provider.cart[index].unitTag!}\n',
-                                                  style: const TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold)),
-                                            ]),
-                                      ),
-                                      RichText(
-                                        maxLines: 1,
-                                        text: TextSpan(
-                                            text: 'Price: ' r"$",
+                                            // text: 'Price: ' r"$",
+                                            text: r"$",
                                             style: TextStyle(
                                                 color: Colors.blueGrey.shade800,
                                                 fontSize: 16.0),
@@ -236,7 +237,7 @@ class _CartScreenState extends State<CartScreen> {
         onTap: () {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
-              content: Text('Payment Successful'),
+              content: Text('¡Pago exitoso!'),
               duration: Duration(seconds: 2),
             ),
           );
@@ -246,7 +247,7 @@ class _CartScreenState extends State<CartScreen> {
           alignment: Alignment.center,
           height: 50.0,
           child: const Text(
-            'Proceed to Pay',
+            'Pagar',
             style: TextStyle(
               fontSize: 18.0,
               fontWeight: FontWeight.bold,

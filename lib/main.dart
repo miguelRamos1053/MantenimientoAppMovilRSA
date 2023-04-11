@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       child: Builder(builder: (context) {
         return MaterialApp(
           title: 'GeeksforGeeks',
-          theme: ThemeData(primarySwatch: Colors.green),
+          theme: ThemeData(primarySwatch: Colors.blue),
           darkTheme: ThemeData(primarySwatch: Colors.grey),
           color: Colors.amberAccent,
           supportedLocales: {const Locale('en', ' ')},

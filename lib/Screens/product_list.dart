@@ -20,33 +20,40 @@ class _ProductListState extends State<ProductList> {
 
   List<Item> products = [
     Item(
-        name: 'Apple', unit: 'Kg', price: 20, image: 'assets/images/apple.png'),
-//  Item(
-//      name: 'Mango',
-//      unit: 'Doz',
-//      price: 30,
-//      image: 'assets/images/mango.png'),
+        name: 'Camiseta Negra',
+        unit: 'Kg',
+        price: 50000,
+        image: 'assets/images/camisetaAkat.png'),
     Item(
-        name: 'Banana',
+        name: 'Camiseta Blanca',
+        unit: 'Kg',
+        price: 60000,
+        image: 'assets/images/camisetaGato.png'),
+    Item(
+        name: 'Camiseta Blanca',
         unit: 'Doz',
-        price: 10,
-        image: 'assets/images/banana.png')
-//  Item(
-//      name: 'Grapes',
-//      unit: 'Kg',
-//      price: 8,
-//      image: 'assets/images/grapes.png'),
-//  Item(
-//      name: 'Water Melon',
-//      unit: 'Kg',
-//      price: 25,
-//      image: 'assets/images/watermelon.png'),
-//  Item(name: 'Kiwi', unit: 'Pc', price: 40, image: 'assets/images/kiwi.png'),
-//  Item(
-//      name: 'Orange',
-//      unit: 'Doz',
-//      price: 15,
-//      image: 'assets/images/orange.png'),
+        price: 40000,
+        image: 'assets/images/camisetaGatoCorazones.png'),
+    Item(
+        name: 'Camiseta Blanca',
+        unit: 'Kg',
+        price: 100000,
+        image: 'assets/images/camisetaNaruto.png'),
+    Item(
+        name: 'Camiseta Negra',
+        unit: 'Kg',
+        price: 75000,
+        image: 'assets/images/camisetaNegraEstrella.png'),
+    Item(
+        name: 'Termos',
+        unit: 'Kg',
+        price: 70000,
+        image: 'assets/images/termos.png'),
+    Item(
+        name: 'Termos Pareja',
+        unit: 'Kg',
+        price: 90000,
+        image: 'assets/images/termosPareja.png'),
 //  Item(name: 'Peach', unit: 'Pc', price: 8, image: 'assets/images/peach.png'),
 //  Item(
 //      name: 'Strawberry',
@@ -58,7 +65,6 @@ class _ProductListState extends State<ProductList> {
 //      unit: 'Kg',
 //      price: 55,
 //      image: 'assets/images/fruitBasket.png'),
-//
   ];
 
   @override
@@ -88,7 +94,7 @@ class _ProductListState extends State<ProductList> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Product List'),
+        title: const Text('Lista de Productos'),
         actions: [
           badges.Badge(
             badgeContent: Consumer<CartProvider>(
@@ -100,7 +106,7 @@ class _ProductListState extends State<ProductList> {
                 );
               },
             ),
-            position: BadgePosition.topEnd(top: -10, end: -12),
+            position: BadgePosition.topEnd(top: -3, end: -12),
             child: IconButton(
               onPressed: () {
                 Navigator.push(
@@ -143,7 +149,7 @@ class _ProductListState extends State<ProductList> {
                           overflow: TextOverflow.ellipsis,
                           maxLines: 1,
                           text: TextSpan(
-                              text: 'Name: ',
+                              // text: 'Name: ',
                               style: TextStyle(
                                   color: Colors.blueGrey.shade700,
                                   fontSize: 16.0),
@@ -155,25 +161,26 @@ class _ProductListState extends State<ProductList> {
                                         fontWeight: FontWeight.bold)),
                               ]),
                         ),
+                        // RichText(
+                        //   maxLines: 1,
+                        //   text: TextSpan(
+                        //       text: 'Unit: ',
+                        //       style: TextStyle(
+                        //           color: Colors.blueGrey.shade800,
+                        //           fontSize: 16.0),
+                        //       children: [
+                        //         TextSpan(
+                        //             text:
+                        //                 '${products[index].unit.toString()}\n',
+                        //             style: const TextStyle(
+                        //                 fontWeight: FontWeight.bold)),
+                        //       ]),
+                        // ),
                         RichText(
                           maxLines: 1,
                           text: TextSpan(
-                              text: 'Unit: ',
-                              style: TextStyle(
-                                  color: Colors.blueGrey.shade800,
-                                  fontSize: 16.0),
-                              children: [
-                                TextSpan(
-                                    text:
-                                        '${products[index].unit.toString()}\n',
-                                    style: const TextStyle(
-                                        fontWeight: FontWeight.bold)),
-                              ]),
-                        ),
-                        RichText(
-                          maxLines: 1,
-                          text: TextSpan(
-                              text: 'Price: ' r"$",
+                              // text: 'Price: ' r"$",
+                              text: r'$',
                               style: TextStyle(
                                   color: Colors.blueGrey.shade800,
                                   fontSize: 16.0),
@@ -194,7 +201,7 @@ class _ProductListState extends State<ProductList> {
                     onPressed: () {
                       savedData(index);
                     },
-                    child: const Text('Add to Cart'),
+                    child: const Text('Añadir al Carrito'),
                   )
                 ],
               ),
