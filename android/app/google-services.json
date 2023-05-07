@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1018443800415",
+    "project_id": "estampapp-673d8",
+    "storage_bucket": "estampapp-673d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018443800415:android:3abb821909bd39683aa0ea",
+        "android_client_info": {
+          "package_name": "com.rsateam.estampados_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018443800415-donpocgdbp5e46vusrskjeomcbbdf905.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnGPlUztO1kpAhVsv67yY-42Y9lemCGYE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018443800415-donpocgdbp5e46vusrskjeomcbbdf905.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

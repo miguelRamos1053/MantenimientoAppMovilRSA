@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:estampados_app/Provider/cart_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:estampados_app/Screens/product_list.dart';
+import 'home_page.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
