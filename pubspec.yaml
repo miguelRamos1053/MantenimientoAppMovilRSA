@@ -39,6 +39,7 @@ dependencies:
   sqflite: ^2.2.6
   badges: ^3.0.3
   cupertino_icons: ^1.0.5
+  arcore_flutter_plugin: ^0.1.0
   
   
   

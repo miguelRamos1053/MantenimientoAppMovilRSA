@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "arcore_flutter_plugin",
+      "rootUri": "file:///C:/Users/NEWSHORE_/AppData/Local/Pub/Cache/hosted/pub.dev/arcore_flutter_plugin-0.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "args",
       "rootUri": "file:///C:/Users/NEWSHORE_/AppData/Local/Pub/Cache/hosted/pub.dev/args-2.4.1",
       "packageUri": "lib/",
@@ -52,6 +58,12 @@
     {
       "name": "cupertino_icons",
       "rootUri": "file:///C:/Users/NEWSHORE_/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "equatable",
+      "rootUri": "file:///C:/Users/NEWSHORE_/AppData/Local/Pub/Cache/hosted/pub.dev/equatable-2.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -446,7 +458,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2023-05-07T16:07:32.055034Z",
+  "generated": "2023-05-07T17:52:49.534139Z",
   "generator": "pub",
   "generatorVersion": "2.19.4"
 }

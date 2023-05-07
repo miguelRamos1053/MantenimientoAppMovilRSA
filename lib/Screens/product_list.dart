@@ -7,6 +7,7 @@ import 'package:estampados_app/dataBase/bd_helper.dart';
 import 'package:estampados_app/Provider/cart_provider.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:badges/badges.dart';
+import 'package:estampados_app/arcore_flutter_plugin-master/example/lib/screens/augmented_images.dart';
 
 class ProductList extends StatefulWidget {
   const ProductList({Key? key}) : super(key: key);
@@ -119,6 +120,13 @@ class _ProductListState extends State<ProductList> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text('Lista de Productos'),
+        leading: IconButton(
+          icon: Icon(Icons.remove_red_eye_outlined),
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => AugmentedPage()));
+          },
+        ),
         actions: [
           badges.Badge(
             badgeContent: Consumer<CartProvider>(
