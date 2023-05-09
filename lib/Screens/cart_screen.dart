@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:estampados_app/Provider/cart_provider.dart';
 import 'package:estampados_app/dataBase/bd_helper.dart';
 import 'package:provider/provider.dart';
-import 'package:estampados_app/Model/Cart_model.dart';
+import 'package:estampados_app/Model/cart_model.dart';
 import 'package:badges/badges.dart' as badges;
 
 class CartScreen extends StatefulWidget {
@@ -284,7 +284,7 @@ class PlusMinusButtons extends StatelessWidget {
 
 class ReusableWidget extends StatelessWidget {
   final String title, value;
-  const ReusableWidget({Key? key, required this.title, required this.value});
+  const ReusableWidget({super.key, required this.title, required this.value});
 
   @override
   Widget build(BuildContext context) {

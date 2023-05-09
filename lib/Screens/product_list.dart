@@ -1,7 +1,7 @@
 import 'package:estampados_app/Screens/cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:estampados_app/Model/Cart_model.dart';
+import 'package:estampados_app/Model/cart_model.dart';
 import 'package:estampados_app/Model/item_model.dart';
 import 'package:estampados_app/dataBase/bd_helper.dart';
 import 'package:estampados_app/Provider/cart_provider.dart';
@@ -111,9 +111,7 @@ class _ProductListState extends State<ProductList> {
           .then((value) {
         cart.addTotalPrice(products[index].price.toDouble());
         cart.addCounter();
-      }).onError((error, stackTrace) {
-        print(error.toString());
-      });
+      }).onError((error, stackTrace) {});
     }
 
     return Scaffold(
@@ -121,7 +119,7 @@ class _ProductListState extends State<ProductList> {
         centerTitle: true,
         title: const Text('Lista de Productos'),
         leading: IconButton(
-          icon: Icon(Icons.remove_red_eye_outlined),
+          icon: const Icon(Icons.remove_red_eye_outlined),
           onPressed: () {
             Navigator.of(context)
                 .push(MaterialPageRoute(builder: (context) => AugmentedPage()));

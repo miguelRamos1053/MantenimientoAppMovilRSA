@@ -35,8 +35,7 @@ class _AugmentedPageState extends State<AugmentedPage> {
   void _onArCoreViewCreated(dynamic controller) {
     if (controller is ArCoreController) {
       arCoreController = controller;
-      arCoreController?.onTrackingImage =
-          _handleOnTrackingImage as ArCoreAugmentedImageTrackingHandler?;
+      arCoreController?.onTrackingImage = _handleOnTrackingImage;
       loadSingleImage();
     }
   }
