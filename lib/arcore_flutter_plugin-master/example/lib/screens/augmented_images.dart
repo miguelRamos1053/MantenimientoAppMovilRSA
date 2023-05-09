@@ -42,7 +42,7 @@ class _AugmentedPageState extends State<AugmentedPage> {
   }
 
   loadSingleImage() async {
-    final ByteData bytes = await rootBundle.load('assets/logo_ar.jpg');
+    final ByteData bytes = await rootBundle.load('assets/images/logo_ar.jpg');
     arCoreController?.loadSingleAugmentedImage(
         bytes: bytes.buffer.asUint8List());
   }
@@ -56,7 +56,7 @@ class _AugmentedPageState extends State<AugmentedPage> {
 
   Future _addImage(ArCoreAugmentedImage augmentedImage) async {
     final bytes =
-        (await rootBundle.load('assets/test.png')).buffer.asUint8List();
+        (await rootBundle.load('assets/images/test.png')).buffer.asUint8List();
     final img = ArCoreNode(
         image: ArCoreImage(bytes: bytes, width: 500, height: 500),
         position: vector.Vector3(0.0, 0.0, 0.05),
