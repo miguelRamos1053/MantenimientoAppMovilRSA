@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.estampados_app">
-    <application
+   <application
         android:label="estampados_app"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
