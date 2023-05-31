@@ -1,10 +1,14 @@
 # estampados_app
 
-A new Flutter project.
+Hola bienvenidos a este proyecto llamado estampados app
 
-## Getting Started
+## Paso a paso de la instalación
 
-This project is a starting point for a Flutter application.
+Para empezar el proyecto esta hecho en flutter por lo tanto vamos a instalar el flutter
+
+El link para instalar el flutter(https://docs.flutter.dev/get-started/install)
+
+
 
 A few resources to get you started if this is your first Flutter project:
 
