@@ -9,24 +9,24 @@ Para empezar el proyecto esta hecho en flutter por lo tanto vamos a instalar el 
 El link para instalar el flutter: https://docs.flutter.dev/get-started/install
 
 Ingresamos a algo como la siguente:
-https://github.com/miguelRamos1053/MantenimientoAppMovilRSA/blob/AlberthReadme/assets/readme/installFlutter.png
+!(https://github.com/miguelRamos1053/MantenimientoAppMovilRSA/blob/AlberthReadme/assets/readme/installFlutter.png)
 
 Seleccionamos el sistema operativo, descargamos e instalamos.
 
 Despues descargamos el SDK del siguente link: https://docs.flutter.dev/release/archive?gclid=EAIaIQobChMIk6K5vvKQ_wIV7NXjBx2fqwZaEAAYASAAEgLfXvD_BwE&gclsrc=aw.ds
 
 Ingresamos a la siguente pagina:
-https://github.com/miguelRamos1053/MantenimientoAppMovilRSA/blob/AlberthReadme/assets/readme/installSdkF.png
+!(https://github.com/miguelRamos1053/MantenimientoAppMovilRSA/blob/AlberthReadme/assets/readme/installSdkF.png)
 
 Bajamos hasta esta secciones y seleccionamos la version 3.7.0:
-https://github.com/miguelRamos1053/MantenimientoAppMovilRSA/blob/AlberthReadme/assets/readme/SdkFl.png
+!(https://github.com/miguelRamos1053/MantenimientoAppMovilRSA/blob/AlberthReadme/assets/readme/SdkFl.png)
 
 En caso de usar Visual studio code, en la pestaña de extenciones buscamos flutter y lo instalamos:
-https://github.com/miguelRamos1053/MantenimientoAppMovilRSA/blob/AlberthReadme/assets/readme/flutterVisual.png
+!(https://github.com/miguelRamos1053/MantenimientoAppMovilRSA/blob/AlberthReadme/assets/readme/flutterVisual.png)
 Esto tambien nos instala el dart
 
 En caso de no usar el Visual studio descargamos el Dart: https://dart.dev/get-dart/archive
-https://github.com/miguelRamos1053/MantenimientoAppMovilRSA/blob/AlberthReadme/assets/readme/DartSdk.png
+!(https://github.com/miguelRamos1053/MantenimientoAppMovilRSA/blob/AlberthReadme/assets/readme/DartSdk.png)
 
 Seleccionamos la version 2.19.0, descargamos he instalamos.
 
