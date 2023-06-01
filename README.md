@@ -9,7 +9,7 @@ Para empezar el proyecto esta hecho en flutter por lo tanto vamos a instalar el 
 El link para instalar el flutter: https://docs.flutter.dev/get-started/install
 
 Ingresamos a algo como la siguente:
-!(https://github.com/miguelRamos1053/MantenimientoAppMovilRSA/blob/AlberthReadme/assets/readme/installFlutter.png)
+![Imagen de la pagina Flutter](https://github.com/miguelRamos1053/MantenimientoAppMovilRSA/blob/AlberthReadme/assets/readme/installFlutter.png)
 
 Seleccionamos el sistema operativo, descargamos e instalamos.
 
