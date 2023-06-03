@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Cart {
   late final int? id;
   final String? productId;
@@ -45,10 +44,6 @@ class Cart {
   }
 
   Map<String, dynamic> quanityMap() {
-    return {
-      'productId': productId,
-      'quantity': quantity!.value
-    };
+    return {'productId': productId, 'quantity': quantity!.value};
   }
-  
 }
