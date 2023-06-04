@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:estampados_app/dataBase/bd_helper.dart';
+import '../dataBase/bd_helper.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:estampados_app/Model/cart_model.dart';
+import '../Model/cart_model.dart';
 
 class CartProvider with ChangeNotifier {
   DBHelper dbHelper = DBHelper();
@@ -21,7 +21,7 @@ class CartProvider with ChangeNotifier {
     return cart;
   }
 
-  void _setPrefsItems() async {
+  Future<void> _setPrefsItems() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setInt('cart_items', _counter);
     prefs.setInt('item_quantity', _quantity);
@@ -29,7 +29,7 @@ class CartProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  void _getPrefsItems() async {
+  Future<void> _getPrefsItems() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     _counter = prefs.getInt('cart_items') ?? 0;
     _quantity = prefs.getInt('item_quantity') ?? 1;

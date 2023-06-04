@@ -1,5 +1,5 @@
-import 'package:arcore_flutter_plugin/src/arcore_node.dart';
-import 'package:arcore_flutter_plugin/src/shape/arcore_shape.dart';
+import 'arcore_node.dart';
+import 'shape/arcore_shape.dart';
 import 'package:flutter/widgets.dart';
 import 'package:vector_math/vector_math_64.dart';
 
@@ -19,13 +19,15 @@ class ArCoreRotatingNode extends ArCoreNode {
           scale: scale,
         );
 
+  @override
   final ArCoreShape? shape;
 
   final ValueNotifier<double> degreesPerSecond;
 
+  @override
   Map<String, dynamic> toMap() => <String, dynamic>{
         'degreesPerSecond': this.degreesPerSecond.value,
       }
         ..addAll(super.toMap())
-        ..removeWhere((String k, dynamic v) => v == null);
+        ..removeWhere((k, v) => v == null);
 }

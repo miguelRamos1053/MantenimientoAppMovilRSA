@@ -1,24 +1,8 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class Cart {
-  late final int? id;
-  final String? productId;
-  final String? productName;
-  final int? initialPrice;
-  final int? productPrice;
-  final ValueNotifier<int>? quantity;
-  final String? unitTag;
-  final String? image;
-
-  Cart(
-      {required this.id,
-      required this.productId,
-      required this.productName,
-      required this.initialPrice,
-      required this.productPrice,
-      required this.quantity,
-      required this.unitTag,
-      required this.image});
 
   Cart.fromMap(Map<dynamic, dynamic> data)
       : id = data['id'],
@@ -29,6 +13,24 @@ class Cart {
         quantity = ValueNotifier(data['quantity']),
         unitTag = data['unitTag'],
         image = data['image'];
+
+  Cart(
+      {required this.id,
+      required this.productId,
+      required this.productName,
+      required this.initialPrice,
+      required this.productPrice,
+      required this.quantity,
+      required this.unitTag,
+      required this.image});
+  late final int? id;
+  final String? productId;
+  final String? productName;
+  final int? initialPrice;
+  final int? productPrice;
+  final ValueNotifier<int>? quantity;
+  final String? unitTag;
+  final String? image;
 
   Map<String, dynamic> toMap() {
     return {

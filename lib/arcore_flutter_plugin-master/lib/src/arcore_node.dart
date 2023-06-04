@@ -1,8 +1,8 @@
-import 'package:arcore_flutter_plugin/src/arcore_image.dart';
-import 'package:arcore_flutter_plugin/src/shape/arcore_shape.dart';
-import 'package:arcore_flutter_plugin/src/utils/random_string.dart'
+import 'arcore_image.dart';
+import 'shape/arcore_shape.dart';
+import 'utils/random_string.dart'
     as random_string;
-import 'package:arcore_flutter_plugin/src/utils/vector_utils.dart';
+import 'utils/vector_utils.dart';
 import 'package:flutter/widgets.dart';
 import 'package:vector_math/vector_math_64.dart';
 
@@ -45,5 +45,5 @@ class ArCoreNode {
         'image': image?.toMap(),
         'children':
             this.children?.map((arCoreNode) => arCoreNode.toMap()).toList(),
-      }..removeWhere((String k, dynamic v) => v == null);
+      }..removeWhere((k, v) => v == null);
 }

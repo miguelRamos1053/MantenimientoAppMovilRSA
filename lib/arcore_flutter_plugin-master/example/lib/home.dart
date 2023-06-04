@@ -1,4 +1,4 @@
-import 'package:arcore_flutter_plugin_example/screens/augmented_images.dart';
+import 'screens/augmented_images.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
               Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => AugmentedPage()));
             },
-            title: Text("AugmentedPage"),
+            title: const Text('AugmentedPage'),
           )
         ],
       ),

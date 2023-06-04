@@ -3,6 +3,11 @@ import 'package:vector_math/vector_math_64.dart';
 import 'arcore_pose.dart';
 
 class ArCoreHitTestResult {
+
+  ArCoreHitTestResult.fromMap(Map<dynamic, dynamic> map) {
+    this.distance = map['distance'];
+    this.pose = ArCorePose.fromMap(map['pose']);
+  }
   late double distance;
 
   late Vector3 translation;
@@ -12,9 +17,4 @@ class ArCoreHitTestResult {
   late String nodeName;
 
   late ArCorePose pose;
-
-  ArCoreHitTestResult.fromMap(Map<dynamic, dynamic> map) {
-    this.distance = map['distance'];
-    this.pose = ArCorePose.fromMap(map['pose']);
-  }
 }

@@ -2,6 +2,15 @@ import 'dart:typed_data';
 import 'dart:ui';
 
 class ArCoreMaterial {
+
+  ArCoreMaterial({
+    this.metallic,
+    this.roughness,
+    this.reflectance,
+    this.color,
+//    this.texture,
+    this.textureBytes,
+  });
   final Color? color;
 
 //  final String texture;
@@ -27,15 +36,6 @@ class ArCoreMaterial {
   /// reflectance. The default value is 0.5.
   final double? reflectance;
 
-  ArCoreMaterial({
-    this.metallic,
-    this.roughness,
-    this.reflectance,
-    this.color,
-//    this.texture,
-    this.textureBytes,
-  });
-
   Map<String, dynamic> toMap() => <String, dynamic>{
         'color': [color!.alpha, color!.red, color!.green, color!.blue],
 //        'texture': this.texture,
@@ -43,5 +43,5 @@ class ArCoreMaterial {
         'metallic': this.metallic,
         'roughness': this.roughness,
         'reflectance': this.reflectance,
-      }..removeWhere((String k, dynamic v) => v == null);
+      }..removeWhere((k, v) => v == null);
 }

@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:estampados_app/services/select_image.dart';
+import 'services/select_image.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
                         Text(
-                          "\$ 255.300",
+                          '\$ 255.300',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold),
@@ -59,12 +59,12 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
                   CircleAvatar(
-                    backgroundImage: AssetImage("lib/assets/nequi.png"),
+                    backgroundImage: AssetImage('lib/assets/nequi.png'),
                     radius: 50,
                   ),
                   SizedBox(width: 20),
                   CircleAvatar(
-                    backgroundImage: AssetImage("lib/assets/daviplata.png"),
+                    backgroundImage: AssetImage('lib/assets/daviplata.png'),
                     radius: 50,
                   ),
                 ],
@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    "¿Cómo pagar?",
+                    '¿Cómo pagar?',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 24,
@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   const SizedBox(height: 10),
                   const Text(
-                    "Realiza la consignación al número que se muestra abajo.",
+                    'Realiza la consignación al número que se muestra abajo.',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Text(
-                                "(318) 967 2312",
+                                '(318) 967 2312',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold),
@@ -125,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                   ]),
                   const SizedBox(height: 20),
                   const Text(
-                    "Tómale foto al comprobante y súbelo",
+                    'Tómale foto al comprobante y súbelo',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
@@ -148,7 +148,7 @@ class _HomePageState extends State<HomePage> {
                     50), // Establecer el ancho del botón en toda la pantalla y la altura en 50 píxeles
               ),
               child: const Text(
-                "Cargar comprobante",
+                'Cargar comprobante',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
             ),

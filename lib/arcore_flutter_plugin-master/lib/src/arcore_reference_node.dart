@@ -3,12 +3,6 @@ import 'package:vector_math/vector_math_64.dart';
 import 'arcore_node.dart';
 
 class ArCoreReferenceNode extends ArCoreNode {
-  /// Filename of sfb object in assets folder (generated with Import Sceneform Asset)
-  /// https://developers.google.com/ar/develop/java/sceneform/import-assets
-  final String? object3DFileName;
-
-  /// Url of gltf object for remote rendering
-  final String? objectUrl;
 
   ArCoreReferenceNode({
     String? name,
@@ -24,6 +18,12 @@ class ArCoreReferenceNode extends ArCoreNode {
             position: position,
             scale: scale,
             rotation: rotation);
+  /// Filename of sfb object in assets folder (generated with Import Sceneform Asset)
+  /// https://developers.google.com/ar/develop/java/sceneform/import-assets
+  final String? object3DFileName;
+
+  /// Url of gltf object for remote rendering
+  final String? objectUrl;
 
   @override
   Map<String, dynamic> toMap() => <String, dynamic>{

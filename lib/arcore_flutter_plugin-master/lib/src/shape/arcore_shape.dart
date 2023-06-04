@@ -1,4 +1,4 @@
-import 'package:arcore_flutter_plugin/src/arcore_material.dart';
+import '../arcore_material.dart';
 import 'package:flutter/widgets.dart';
 
 abstract class ArCoreShape {
@@ -10,5 +10,5 @@ abstract class ArCoreShape {
   Map<String, dynamic> toMap() => <String, dynamic>{
         'dartType': runtimeType.toString(),
         'materials': materials.value.map((m) => m.toMap()).toList(),
-      }..removeWhere((String k, dynamic v) => v == null);
+      }..removeWhere((k, v) => v == null);
 }

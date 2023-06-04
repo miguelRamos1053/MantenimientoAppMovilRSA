@@ -15,6 +15,7 @@ class ArCoreFaceController {
   late MethodChannel _channel;
   late StringResultHandler onError;
 
+  // ignore: always_declare_return_types
   init() async {
     try {
       await _channel.invokeMethod<void>('init', {

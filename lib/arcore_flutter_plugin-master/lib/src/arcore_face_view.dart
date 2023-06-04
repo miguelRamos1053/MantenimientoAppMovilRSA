@@ -1,4 +1,4 @@
-import 'package:arcore_flutter_plugin/src/arcore_android_view.dart';
+import 'arcore_android_view.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -8,9 +8,6 @@ import 'arcore_view.dart';
 typedef void ArCoreFaceViewCreatedCallback(ArCoreFaceController controller);
 
 class ArCoreFaceView extends StatefulWidget {
-  final ArCoreFaceViewCreatedCallback? onArCoreViewCreated;
-  final bool enableAugmentedFaces;
-  final bool debug;
 
   const ArCoreFaceView(
       {Key? key,
@@ -18,6 +15,9 @@ class ArCoreFaceView extends StatefulWidget {
       this.enableAugmentedFaces = false,
       this.debug = false})
       : super(key: key);
+  final ArCoreFaceViewCreatedCallback? onArCoreViewCreated;
+  final bool enableAugmentedFaces;
+  final bool debug;
 
   @override
   _ArCoreFaceViewState createState() => _ArCoreFaceViewState();

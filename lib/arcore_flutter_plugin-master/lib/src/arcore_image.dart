@@ -17,5 +17,5 @@ class ArCoreImage {
         'bytes': bytes,
         'width': width,
         'height': height
-      }..removeWhere((String k, dynamic v) => v == null);
+      }..removeWhere((k, v) => v == null);
 }

@@ -1,6 +1,8 @@
+// ignore_for_file: always_declare_return_types
+
 import 'dart:io' as io;
 import 'package:path_provider/path_provider.dart';
-import 'package:estampados_app/Model/cart_model.dart';
+import '../Model/cart_model.dart';
 import 'package:sqflite/sqflite.dart';
 // ignore: depend_on_referenced_packages
 import 'package:path/path.dart';
@@ -16,7 +18,7 @@ class DBHelper {
     return null;
   }
 
-  initDatabase() async {
+  Future<Database> initDatabase() async {
     io.Directory directory = await getApplicationDocumentsDirectory();
     String path = join(directory.path, 'cart.db');
     var db = await openDatabase(path, version: 1, onCreate: _onCreate);
@@ -47,7 +49,7 @@ class DBHelper {
   Future<int> updateQuantity(Cart cart) async {
     var dbClient = await database;
     return await dbClient!.update('cart', cart.quanityMap(),
-        where: "productId = ?", whereArgs: [cart.productId]);
+        where: 'productId = ?', whereArgs: [cart.productId]);
   }
 
 // deleting an item from the cart screen

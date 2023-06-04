@@ -1,6 +1,6 @@
-import 'package:arcore_flutter_plugin/src/arcore_augmented_image.dart';
-import 'package:arcore_flutter_plugin/src/arcore_rotating_node.dart';
-import 'package:arcore_flutter_plugin/src/utils/vector_utils.dart';
+import 'arcore_augmented_image.dart';
+import 'arcore_rotating_node.dart';
+import 'utils/vector_utils.dart';
 import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
 
@@ -18,17 +18,6 @@ typedef ArCoreAugmentedImageTrackingHandler = void Function(
 const UTILS_CHANNEL_NAME = 'arcore_flutter_plugin/utils';
 
 class ArCoreController {
-  static checkArCoreAvailability() async {
-    final bool arcoreAvailable = await MethodChannel(UTILS_CHANNEL_NAME)
-        .invokeMethod('checkArCoreApkAvailability');
-    return arcoreAvailable;
-  }
-
-  static checkIsArCoreInstalled() async {
-    final bool arcoreInstalled = await MethodChannel(UTILS_CHANNEL_NAME)
-        .invokeMethod('checkIfARCoreServicesInstalled');
-    return arcoreInstalled;
-  }
 
   ArCoreController(
       {required this.id,
@@ -41,6 +30,17 @@ class ArCoreController {
     _channel = MethodChannel('arcore_flutter_plugin_$id');
     _channel.setMethodCallHandler(_handleMethodCalls);
     init();
+  }
+  static Future<bool> checkArCoreAvailability() async {
+    final bool arcoreAvailable = await const MethodChannel(UTILS_CHANNEL_NAME)
+        .invokeMethod('checkArCoreApkAvailability');
+    return arcoreAvailable;
+  }
+
+  static Future<bool> checkIsArCoreInstalled() async {
+    final bool arcoreInstalled = await const MethodChannel(UTILS_CHANNEL_NAME)
+        .invokeMethod('checkIfARCoreServicesInstalled');
+    return arcoreInstalled;
   }
 
   final int id;
@@ -58,6 +58,7 @@ class ArCoreController {
   String trackingState = '';
   ArCoreAugmentedImageTrackingHandler? onTrackingImage;
 
+  // ignore: always_declare_return_types
   init() async {
     try {
       await _channel.invokeMethod<void>('init', {
@@ -92,7 +93,7 @@ class ArCoreController {
           final objects = input
               .cast<Map<dynamic, dynamic>>()
               .map<ArCoreHitTestResult>(
-                  (Map<dynamic, dynamic> h) => ArCoreHitTestResult.fromMap(h))
+                  (h) => ArCoreHitTestResult.fromMap(h))
               .toList();
           onPlaneTap!(objects);
         }
@@ -150,7 +151,7 @@ class ArCoreController {
     return _channel.invokeMethod('getTrackingState');
   }
 
-  addArCoreNodeToAugmentedImage(ArCoreNode node, int index,
+  Future addArCoreNodeToAugmentedImage(ArCoreNode node, int index,
       {String? parentNodeName}) {
     final params = _addParentNodeNameToParams(node.toMap(), parentNodeName);
     return _channel.invokeMethod(

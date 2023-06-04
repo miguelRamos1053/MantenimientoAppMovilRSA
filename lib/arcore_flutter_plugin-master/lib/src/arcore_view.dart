@@ -1,5 +1,5 @@
-import 'package:arcore_flutter_plugin/src/arcore_android_view.dart';
-import 'package:arcore_flutter_plugin/src/arcore_controller.dart';
+import 'arcore_android_view.dart';
+import 'arcore_controller.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -8,15 +8,6 @@ typedef void ArCoreViewCreatedCallback(ArCoreController controller);
 enum ArCoreViewType { AUGMENTEDFACE, STANDARDVIEW, AUGMENTEDIMAGES }
 
 class ArCoreView extends StatefulWidget {
-  final ArCoreViewCreatedCallback onArCoreViewCreated;
-
-//  final UnsupportedHandler onArCoreUnsupported;
-
-  final bool enableTapRecognizer;
-  final bool enablePlaneRenderer;
-  final bool enableUpdateListener;
-  final bool debug;
-  final ArCoreViewType type;
 
   const ArCoreView(
       {Key? key,
@@ -28,6 +19,15 @@ class ArCoreView extends StatefulWidget {
       this.type = ArCoreViewType.STANDARDVIEW,
       this.debug = false})
       : super(key: key);
+  final ArCoreViewCreatedCallback onArCoreViewCreated;
+
+//  final UnsupportedHandler onArCoreUnsupported;
+
+  final bool enableTapRecognizer;
+  final bool enablePlaneRenderer;
+  final bool enableUpdateListener;
+  final bool debug;
+  final ArCoreViewType type;
 
   @override
   _ArCoreViewState createState() => _ArCoreViewState();

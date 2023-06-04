@@ -1,13 +1,15 @@
-import 'package:estampados_app/Screens/cart_screen.dart';
+// ignore_for_file: avoid_relative_lib_imports
+
+import 'cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:estampados_app/Model/cart_model.dart';
-import 'package:estampados_app/Model/item_model.dart';
-import 'package:estampados_app/dataBase/bd_helper.dart';
-import 'package:estampados_app/Provider/cart_provider.dart';
+import '../Model/cart_model.dart';
+import '../Model/item_model.dart';
+import '../dataBase/bd_helper.dart';
+import '../Provider/cart_provider.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:badges/badges.dart';
-import 'package:estampados_app/arcore_flutter_plugin-master/example/lib/screens/augmented_images.dart';
+import '../arcore_flutter_plugin-master/example/lib/screens/augmented_images.dart';
 
 class ProductList extends StatefulWidget {
   const ProductList({Key? key}) : super(key: key);

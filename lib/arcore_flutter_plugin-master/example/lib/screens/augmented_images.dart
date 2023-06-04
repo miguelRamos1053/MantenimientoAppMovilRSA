@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages, always_declare_return_types
+
 import 'package:arcore_flutter_plugin/src/arcore_augmented_image.dart';
 import 'package:arcore_flutter_plugin/src/arcore_controller.dart';
 import 'package:arcore_flutter_plugin/src/arcore_image.dart';
@@ -32,7 +34,7 @@ class _AugmentedPageState extends State<AugmentedPage> {
     );
   }
 
-  void _onArCoreViewCreated(dynamic controller) {
+  void _onArCoreViewCreated(controller) {
     if (controller is ArCoreController) {
       arCoreController = controller;
       arCoreController?.onTrackingImage = _handleOnTrackingImage;

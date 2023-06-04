@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:estampados_app/Provider/cart_provider.dart';
+import 'Provider/cart_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:estampados_app/Screens/product_list.dart';
+import 'Screens/product_list.dart';
 
 void main() => runApp(const MyApp());
 

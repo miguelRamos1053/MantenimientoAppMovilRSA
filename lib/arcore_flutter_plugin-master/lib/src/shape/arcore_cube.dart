@@ -1,6 +1,6 @@
-import 'package:arcore_flutter_plugin/src/arcore_material.dart';
-import 'package:arcore_flutter_plugin/src/shape/arcore_shape.dart';
-import 'package:arcore_flutter_plugin/src/utils/vector_utils.dart';
+import '../arcore_material.dart';
+import 'arcore_shape.dart';
+import '../utils/vector_utils.dart';
 import 'package:vector_math/vector_math_64.dart';
 
 class ArCoreCube extends ArCoreShape {

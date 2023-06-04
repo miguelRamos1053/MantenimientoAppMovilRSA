@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:estampados_app/Provider/cart_provider.dart';
-import 'package:estampados_app/dataBase/bd_helper.dart';
+import '../Provider/cart_provider.dart';
+import '../dataBase/bd_helper.dart';
 import 'package:provider/provider.dart';
-import 'package:estampados_app/Model/cart_model.dart';
+import '../Model/cart_model.dart';
 import 'package:badges/badges.dart' as badges;
 
 class CartScreen extends StatefulWidget {
@@ -55,7 +55,7 @@ class _CartScreenState extends State<CartScreen> {
         children: [
           Expanded(
             child: Consumer<CartProvider>(
-              builder: (BuildContext context, provider, widget) {
+              builder: (context, provider, widget) {
                 if (provider.cart.isEmpty) {
                   return const Center(
                       child: Text(
@@ -129,7 +129,7 @@ class _CartScreenState extends State<CartScreen> {
                                         maxLines: 1,
                                         text: TextSpan(
                                             // text: 'Price: ' r"$",
-                                            text: r"$",
+                                            text: r'$',
                                             style: TextStyle(
                                                 color: Colors.blueGrey.shade800,
                                                 fontSize: 16.0),
@@ -211,7 +211,7 @@ class _CartScreenState extends State<CartScreen> {
             ),
           ),
           Consumer<CartProvider>(
-            builder: (BuildContext context, value, Widget? child) {
+            builder: (context, value, child) {
               final ValueNotifier<int?> totalPrice = ValueNotifier(null);
               for (var element in value.cart) {
                 totalPrice.value =
@@ -260,15 +260,15 @@ class _CartScreenState extends State<CartScreen> {
 }
 
 class PlusMinusButtons extends StatelessWidget {
-  final VoidCallback deleteQuantity;
-  final VoidCallback addQuantity;
-  final String text;
   const PlusMinusButtons(
       {Key? key,
       required this.addQuantity,
       required this.deleteQuantity,
       required this.text})
       : super(key: key);
+  final VoidCallback deleteQuantity;
+  final VoidCallback addQuantity;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -283,8 +283,8 @@ class PlusMinusButtons extends StatelessWidget {
 }
 
 class ReusableWidget extends StatelessWidget {
-  final String title, value;
   const ReusableWidget({super.key, required this.title, required this.value});
+  final String title, value;
 
   @override
   Widget build(BuildContext context) {
