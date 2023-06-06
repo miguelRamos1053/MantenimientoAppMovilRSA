@@ -214,9 +214,11 @@ class _CartScreenState extends State<CartScreen> {
             builder: (context, value, child) {
               final ValueNotifier<int?> totalPrice = ValueNotifier(null);
               for (var element in value.cart) {
+                int unitValue = element.productPrice!;
+                int quantity = element.quantity!.value;
+
                 totalPrice.value =
-                    (element.productPrice! * element.quantity!.value) +
-                        (totalPrice.value ?? 0);
+                    (unitValue * quantity) + (totalPrice.value ?? 0);
               }
               return Column(
                 children: [
