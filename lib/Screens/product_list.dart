@@ -11,6 +11,8 @@ import 'package:badges/badges.dart' as badges;
 import 'package:badges/badges.dart';
 import '../arcore_flutter_plugin-master/example/lib/screens/augmented_images.dart';
 
+import 'data_repository.dart';
+
 class ProductList extends StatefulWidget {
   const ProductList({Key? key}) : super(key: key);
 
@@ -20,80 +22,8 @@ class ProductList extends StatefulWidget {
 
 class _ProductListState extends State<ProductList> {
   DBHelper dbHerper = DBHelper();
-
-  List<Item> products = [
-    Item(
-        name: 'Camiseta Negra',
-        unit: 'Kg',
-        price: 50000,
-        image: 'assets/images/camisetaAkat.png'),
-    Item(
-        name: 'Camiseta Blanca',
-        unit: 'Kg',
-        price: 60000,
-        image: 'assets/images/camisetaGato.png'),
-    Item(
-        name: 'Camiseta Blanca',
-        unit: 'Doz',
-        price: 40000,
-        image: 'assets/images/camisetaGatoCorazones.png'),
-    Item(
-        name: 'Camiseta Blanca',
-        unit: 'Kg',
-        price: 100000,
-        image: 'assets/images/camisetaNaruto.png'),
-    Item(
-        name: 'Camiseta Negra',
-        unit: 'Kg',
-        price: 75000,
-        image: 'assets/images/camisetaNegraEstrella.png'),
-    Item(
-        name: 'Termos',
-        unit: 'Kg',
-        price: 70000,
-        image: 'assets/images/termos.png'),
-    Item(
-        name: 'Termos Pareja',
-        unit: 'Kg',
-        price: 90000,
-        image: 'assets/images/termosPareja.png'),
-    Item(
-        name: 'Chaqueta',
-        unit: 'Kg',
-        price: 180000,
-        image: 'assets/images/chaquetaMi.png'),
-    Item(
-        name: 'Chaqueta',
-        unit: 'Kg',
-        price: 185000,
-        image: 'assets/images/chaquetaCal.png'),
-    Item(
-        name: 'Chaqueta',
-        unit: 'Kg',
-        price: 120000,
-        image: 'assets/images/chaquetaFlores.png'),
-    Item(
-        name: 'Chaqueta',
-        unit: 'Kg',
-        price: 190000,
-        image: 'assets/images/chaquetaGat.png'),
-    Item(
-        name: 'Pocillo',
-        unit: 'Kg',
-        price: 20000,
-        image: 'assets/images/pocilloHotel.png'),
-    Item(
-        name: 'Pocillo',
-        unit: 'Kg',
-        price: 19000,
-        image: 'assets/images/pocilloMaestro.png'),
-    Item(
-        name: 'Pocillo',
-        unit: 'Kg',
-        price: 15000,
-        image: 'assets/images/pocilloLove.png'),
-  ];
-
+  DataRepository repository = DataRepository();
+  late List<Item> products = repository.getProducts;
   @override
   Widget build(BuildContext context) {
     final cart = Provider.of<CartProvider>(context);
@@ -231,7 +161,7 @@ class _ProductListState extends State<ProductList> {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blueGrey.shade800),
                     onPressed: () {
-                      savedData(index);
+                    savedData(index);
                     },
                     child: const Text('Añadir al Carrito'),
                   )
