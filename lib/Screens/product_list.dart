@@ -1,4 +1,3 @@
-import 'package:estampados_app/Screens/card_item_list.dart';
 import 'package:estampados_app/Screens/cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -9,6 +8,8 @@ import 'package:estampados_app/Provider/cart_provider.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:badges/badges.dart';
 import 'package:estampados_app/arcore_flutter_plugin-master/example/lib/screens/augmented_images.dart';
+
+import 'data_repository.dart';
 
 class ProductList extends StatefulWidget {
   const ProductList({Key? key}) : super(key: key);
