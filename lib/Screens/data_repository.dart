@@ -1,10 +1,6 @@
 
-import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
-import 'package:estampados_app/Model/cart_model.dart';
 import 'package:estampados_app/Model/item_model.dart';
-import 'package:estampados_app/dataBase/bd_helper.dart';
-import 'package:estampados_app/Provider/cart_provider.dart';
 
 
 
