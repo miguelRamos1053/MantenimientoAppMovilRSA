@@ -38,7 +38,7 @@ class DBHelper {
     return cart;
   }
 
-// getting all the items in the list from the database
+
   Future<List<Cart>> getCartList() async {
     var dbClient = await database;
     final List<Map<String, Object?>> queryResult =
@@ -51,10 +51,10 @@ class DBHelper {
     return await dbClient!.update('cart', cart.quanityMap(),
         where: 'productId = ?', whereArgs: [cart.productId]);
   }
-
-// deleting an item from the cart screen
+ 
   Future<int> deleteCartItem(int id) async {
     var dbClient = await database;
     return await dbClient!.delete('cart', where: 'id = ?', whereArgs: [id]);
   }
 }
+
